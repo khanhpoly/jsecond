@@ -15,19 +15,29 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="{{ asset('js/jquery.js')}}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
+<script src='https://cdn.rawgit.com/jackmoore/zoom/master/jquery.zoom.min.js'></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+  $('#ex1').zoom();
+});
+        $(document).ready(function(){
+  $('#ex2').zoom();
+});
+$(document).ready(function(){
+  $('#ex3').zoom();
+});
+</script>
 
 <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js')}}"></script>
     <script type="text/javascript">
     window.onload=function slider(){
     setTimeout("slider()", 5000);
     }
-
     var dem=1;
-    var sosanh=3;
+    var sosanh=4;
     function slider(){
         dem++;
         document.images['anh'].src='/images/'+dem+'.jpg';
@@ -39,13 +49,12 @@
             setTimeout("slider()", 5000);
         }
     }
-
 </script>
 
 </head>
 <body>
 <header class="header">
-<nav class=" container navbar navbar-default " role="navigation">
+<nav style="padding-left:0 !important;" class="container navbar navbar-default " role="navigation">
 <div class="container">
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -57,7 +66,7 @@
 
 </div>
 
-<div class="collapse navbar-collapse navbar-ex1-collapse">
+<div style="padding-left:0 !important;" class="collapse navbar-collapse navbar-ex1-collapse">
 <ul class="nav navbar-nav">
 <li><a style="color:#e74c3c !important;" href="/">ホーム</a></li>
 <li><a href="#">ニュース</a></li>
@@ -80,12 +89,9 @@
 </li>
 
 <li>
-<form class="navbar-form navbar-left" role="search">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Search">
-</div>
-<button type="submit" class="btn btn-default">Search</button>
-</form>
+<a style="padding-top: 0px;padding-bottom:0px;" href="tel:0155247737">
+<img src="{{ asset('images/1111.PNG')}}" class="img-responsive" alt="Image">
+</a>
 </li>
 
 </ul>
@@ -103,7 +109,6 @@
     <script type="text/javascript">
     
     $(document).ready(function () {
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
@@ -111,14 +116,12 @@
             $('.scrollup').fadeOut();
         }
     });
-
     $('.scrollup').click(function () {
         $("html, body").animate({
             scrollTop: 0
         }, 600);
         return false;
     });
-
 });
 </script>
 <style type="text/css">

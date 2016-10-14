@@ -20,19 +20,8 @@
            </span>
 <h2 class="title">最新情報　Information</h2>  
         <dd>
-        <a href=""><strong>2015/01/04</strong>
-        2015年　年頭所感　今年もどうぞ宜しくお願いします</a></dd>
-        <dd><a href=""><strong>2015/01/04</strong>
-        2015年　年頭所感　今年もどうぞ宜しくお願いします</a></dd>
-        <dd><a href=""><strong>2012/08/30</strong>
-        サービスページを更新しました。
-        </a></dd>
-        <dd><a href="">
-        <strong>2012/08/30</strong>
-        株式会社ジェイセカンドのホームページをオープンしました。
-        </a></dd>
-<h2 class="title">スタッフ便り　Blog</h2> 
-        <dd><a href ="">        
+      
+ <dd><a href ="">        
         <strong>2015/01/04</strong>
         2015年　年頭所感　今年もどうぞ宜しくお願いします
         </a></dd>
@@ -52,6 +41,12 @@
         <strong>2013/06/15</strong>
         たいやき工房　幌平橋FC店を　閉店させて頂きます
         </a></dd>
+
+<h2 class="title">スタッフ便り　Blog</h2> 
+        @foreach($posts as $t)
+        <dd><a href="{!!$t->link()!!}"><strong>{{$t->created_at->format('Y/m/d')}}</strong>
+        {!!$t->title!!}</a></dd>
+       @endforeach
        </div>
 </div>
 @endsection

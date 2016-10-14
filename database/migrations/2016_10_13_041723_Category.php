@@ -13,7 +13,9 @@ class Category extends Migration
     public function up()
     {
        Schema::create('category', function (Blueprint $table) {
-            $table->string('name')->index();           
+            $table->increments('id');
+            $table->string('name')->index();
+            $table->string('slug');           
             $table->integer('idcate');
             $table->timestamp('created_at');
         });

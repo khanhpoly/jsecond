@@ -1,19 +1,13 @@
-	@font-face {
+/*	@font-face {
     font-family:"ăƒ¡ă‚¤ăƒªă‚ª","Hiragino Kaku Gothic Pro",Meiryo,"ăƒ’ăƒ©ă‚®ăƒè§’ă‚´ Pro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif;
     src: url('font/MSGOTHIC.TTF');}
-
+*/
 * {
-	font-family:"ăƒ¡ă‚¤ăƒªă‚ª","Hiragino Kaku Gothic Pro",Meiryo,"ăƒ’ăƒ©ă‚®ăƒè§’ă‚´ Pro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif;
+
+	font-family:"メイリオ","Hiragino Kaku Gothic Pro",Meiryo,"ヒラギノ角ゴ Pro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif;
     margin: 0 auto;
     padding:0;
 }
-/*body{
-	background-color: #eee;
-}
-.container
-{
-	background-color: 	#fff;
-}*/
 .navbar, .navbar-default
 {
 	margin-bottom:0;
@@ -31,17 +25,21 @@ li
 a:active { 
     background-color: yellow;
 }
+
+.navbar-navul>li>a
+{
+	font-weight: bold;
+}
 .cate
 {
 	list-style-type: none;
-	
-	
 }
 .cate>li
 {
 	border-bottom: 1px solid #eee;
 	line-height: 24px;
 	text-align: left;
+	margin-top: 1em;
 
 }
 .sidebar
@@ -54,6 +52,7 @@ a:active {
 .img1
 {
 	width: 100%;
+	/*margin-top: 1em;*/
 
 }
 .footer
@@ -93,6 +92,7 @@ a:hover
 {
 	color:#e74c3c !important; 
 }
+
 .img2
 {
 	width: 30%;
@@ -173,4 +173,27 @@ strong
 .navbar
 {
 	min-height: 0 !important;
+}
+
+.des
+{
+	font-style: italic;
+}
+p,.textbody
+{
+	    display: block;
+    text-align: left;
+    line-height: 180%;
+    margin-top: 7px;
+    margin-right: 0px;
+    margin-bottom: 8px;
+    margin-left: 2px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    font-size: 100%;
+    font-family: メイリオ, "Hiragino Kaku Gothic Pro", Meiryo, "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
+    word-wrap: break-word;
+    white-space: normal;
 }

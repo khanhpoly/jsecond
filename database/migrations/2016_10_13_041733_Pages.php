@@ -13,10 +13,12 @@ class Pages extends Migration
     public function up()
     {
          Schema::create('pages', function (Blueprint $table) {
+        $table->increments('id');    
         $table->string('title')->index();
         $table->text('descrition');
         $table->text('body');
         $table->string('images');
+        $table->string('slug');
         $table->integer('idcate');
         $table->timestamp('created_at');
          });
